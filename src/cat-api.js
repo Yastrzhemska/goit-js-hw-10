@@ -12,8 +12,6 @@ export function fetchBreeds() {
             }
             return response.json();
         })
-        // .then(data => console.log(data))
-        // .catch(err => console.error(err))
     
 };
 
