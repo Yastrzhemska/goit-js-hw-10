@@ -14,13 +14,14 @@ const selectors = {
 }
 // console.log(selectors);
 
+
 selectors.load.classList.replace('loader', 'is-hidden');
 selectors.error.classList.add('is-hidden');
 selectors.info.classList.add('is-hidden');
 
 fetchBreeds().then(data => {
     console.log(data)
-    
+    selectors.select.removeAttribute('hidden')
     selectors.select.innerHTML = data.map(element => `<option value="${element.id}">${element.name}</option>`).join('');
 
     new SlimSelect({
@@ -29,8 +30,8 @@ fetchBreeds().then(data => {
     })
     })
     .catch(onFetchError)
-    .finally(() => selectors.load.setAttribute(`hidden`, true),
-        selectors.select.removeAttribute('hidden'));
+    // .finally(() => selectors.load.setAttribute(`hidden`, true),
+    //     selectors.select.removeAttribute('hidden'));
 
 selectors.select.addEventListener('change', hendlerChangeSelect)
 
