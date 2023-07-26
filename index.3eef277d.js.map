@@ -1,1 +1,0 @@
-{"mappings":"AAIA,MAAMA,EAAY,CACdC,OAAQC,SAASC,cAAc,iBAGnCC,QAAQC,IAAIL","sources":["src/index.js"],"sourcesContent":["\n\n\n\nconst selectors = {\n    select: document.querySelector('breed-select')\n}\n\nconsole.log(selectors);"],"names":["$1f0dc3b9307be026$var$selectors","select","document","querySelector","console","log"],"version":3,"file":"index.3eef277d.js.map"}
